@@ -15,6 +15,8 @@ public class DashboardSecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/dashboard/**").authenticated()
+                        .requestMatchers("/cart/**").permitAll()
+                        .requestMatchers("/auth/**").permitAll()
                         .anyRequest().permitAll()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
