@@ -53,8 +53,8 @@ public class SecurityConfigurationFinmark {
                         .permitAll()
                 )
                 .logout(logout -> logout
-                        .logoutUrl("/logout")
-                        .logoutSuccessUrl("/logout-success")
+                        .logoutUrl("/auth/logout")
+                        .logoutSuccessUrl("/auth/logout-success")
                         .invalidateHttpSession(true)
                         .deleteCookies("JSESSIONID")
                         .permitAll()
