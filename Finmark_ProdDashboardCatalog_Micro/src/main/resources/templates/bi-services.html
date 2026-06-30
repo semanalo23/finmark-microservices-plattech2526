@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinMark Corporation - Business Intelligence Matrix</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #f7fafc;
+            color: #2d3748;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-block {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 24px;
+            height: 24px;
+            background-color: #2d3748;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a202c;
+            letter-spacing: -0.5px;
+        }
+
+        .btn-back {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #edf2f7;
+            color: #1a202c;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .header-section {
+            margin-bottom: 32px;
+        }
+
+        .header-section h1 {
+            font-size: 26px;
+            color: #1a202c;
+            margin: 0 0 6px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .header-section p {
+            font-size: 14px;
+            color: #718096;
+            margin: 0;
+        }
+
+        .matrix-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .matrix-item {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+            transition: transform 0.2s ease;
+        }
+
+        .matrix-item:hover {
+            transform: translateX(4px);
+            border-color: #cbd5e0;
+        }
+
+        .matrix-info {
+            flex-grow: 1;
+        }
+
+        .matrix-info h3 {
+            font-size: 18px;
+            color: #1a202c;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.3px;
+        }
+
+        .matrix-info p {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .btn-checkout {
+            min-width: 220px;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #5a81bf, #4a72b2);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(74, 114, 178, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .btn-checkout:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(74, 114, 178, 0.35);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="/dashboard" class="brand-block">
+        <div class="brand-logo"></div>
+        <div class="brand-title">FinMark Corporation</div>
+    </a>
+    <a href="/dashboard" class="btn-back">← Hub Panel</a>
+</nav>
+
+<div class="container">
+    <div class="header-section">
+        <h1>FinMark Insights Services Matrix</h1>
+        <p>Check out FinMark Insights offers and services. Click any rate to go to checkout.</p>
+    </div>
+
+    <div class="matrix-list">
+
+        <div class="matrix-item">
+            <div class="matrix-info">
+                <h3>1. Real‑Time Financial Dashboards </h3>
+                <p>Interactive BI dashboards for executives and finance teams. Consolidates accounting, payroll, and tax data into a single visualization layer.</p>
+            </div>
+            <form data-th-action="@{/cart/add}" method="post">
+                <input type="hidden" name="serviceName" value="Data Engineering & Integration Pipeline (ETL)">
+                <input type="hidden" name="price" value="120000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱120,000</button>
+            </form>
+        </div>
+
+        <div class="matrix-item">
+            <div class="matrix-info">
+                <h3>2. Predictive Analytics & Forecasting Models </h3>
+                <p>Machine‑learning powered forecasting for revenue, expenses, and cash flow. Helps anticipate risks and opportunities.</p>
+            </div>
+            <form data-th-action="@{/cart/add}" method="post">
+                <input type="hidden" name="serviceName" value="Executive & Operational BI Dashboards">
+                <input type="hidden" name="price" value="60000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱60,000</button>
+            </form>
+        </div>
+
+        <div class="matrix-item">
+            <div class="matrix-info">
+                <h3>3. Data Strategy & Governance Roadmapping</h3>
+                <p>Tailored KPI dashboards for operations, sales, and HR. Enables budget‑versus‑actual analysis and performance benchmarking.</p>
+            </div>
+            <form data-th-action="@{/cart/add}" method="post">
+                <input type="hidden" name="serviceName" value="Data Strategy & Governance Roadmapping">
+                <input type="hidden" name="price" value="75000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱75,000</button>
+            </form>
+        </div>
+
+        <div class="matrix-item">
+            <div class="matrix-info">
+                <h3>4. Automated Alerts & Notifications </h3>
+                <p>Cloud‑based monitoring system that triggers alerts for anomalies in payroll, tax filings, or financial transactions.</p>
+            </div>
+            <form data-th-action="@{/cart/add}" method="post">
+                <input type="hidden" name="serviceName" value="Insights-as-a-Service Retainer">
+                <input type="hidden" name="price" value="45000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱45,000/mo</button>
+            </form>
+        </div>
+
+        <div class="matrix-item">
+            <div class="matrix-info">
+                <h3>5. Enterprise BI Warehouse Management</h3>
+                <p>Large‑scale data warehouse optimization, SQL query tuning, and integration pipelines for multi‑system reporting.</p>
+            </div>
+            <form data-th-action="@{/cart/add}" method="post">
+                <input type="hidden" name="serviceName" value="Enterprise BI Support & Warehouse Management">
+                <input type="hidden" name="price" value="100000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱100,000</button>
+            </form>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center; padding: 24px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px;">
+            <h3 style="margin: 0 0 6px 0; font-size: 16px; color: #1a202c;">Product Catalog Feedback</h3>
+            <p style="margin: 0 0 16px 0; font-size: 13px; color: #718096;">Need adjustments on specific corporate engagement rates? Report metric configurations here.</p>
+            <a data-th-href="@{/feedback}" style="text-decoration: none;">
+                <button type="button" class="btn-checkout" style="max-width: 240px; min-width: auto;">Launch Feedback Console</button>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

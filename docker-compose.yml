@@ -1,0 +1,19 @@
+services:
+  userauth:
+    build: ./Finmark_UserAuth_Micro
+    ports:
+      - "8081:8081"
+
+  dashboard:
+    build: ./Finmark_ProdDashboardCatalog_Micro
+    ports:
+      - "8082:8082"
+    depends_on:
+      - userauth
+
+  feedback:
+    build: ./Finmark_Feedback_Micro
+    ports:
+      - "8083:8083"
+    depends_on:
+      - dashboard
