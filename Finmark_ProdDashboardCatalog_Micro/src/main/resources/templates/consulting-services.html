@@ -171,7 +171,11 @@
                 <h3>1. Corporate Tax Compliance Suite</h3>
                 <p>Automated filing workflows, deadline tracking, and audit‑ready documentation for enterprises.</p>
             </div>
-            <button class="btn-checkout">₱150,000 - ₱400,000+</button>
+            <form action="http://localhost:8084/cart/add" method="post">
+                <input type="hidden" name="serviceName" value="Corporate Tax Compliance Suite">
+                <input type="hidden" name="price" value="150000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱150,000+</button>
+            </form>
         </div>
 
         <div class="matrix-item">
@@ -179,7 +183,11 @@
                 <h3>2. VAT Optimization & Advisory</h3>
                 <p>Strategic VAT planning, input/output reconciliation, and compliance monitoring.</p>
             </div>
-            <button class="btn-checkout">₱120,000 - ₱300,000</button>
+            <form action="http://localhost:8084/cart/add" method="post">
+                <input type="hidden" name="serviceName" value="VAT Optimization & Advisory">
+                <input type="hidden" name="price" value="120000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱120,000</button>
+            </form>
         </div>
 
         <div class="matrix-item">
@@ -187,7 +195,11 @@
                 <h3>3. Cross‑Border Tax Strategy</h3>
                 <p>Risk mapping, treaty benefits analysis, and capital allocation modeling for global operations.</p>
             </div>
-            <button class="btn-checkout">₱80,000 - ₱200,000</button>
+            <form action="http://localhost:8084/cart/add" method="post">
+                <input type="hidden" name="serviceName" value="Cross-Border Tax Strategy">
+                <input type="hidden" name="price" value="80000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱80,000</button>
+            </form>
         </div>
 
         <div class="matrix-item">
@@ -195,16 +207,25 @@
                 <h3>4. SME Tax Filing Automation</h3>
                 <p>Lightweight tax automation tailored for small and medium enterprises, with simplified workflows.</p>
             </div>
-            <button class="btn-checkout">₱40,000 - ₱80,000 / mo</button>
+            <form action="http://localhost:8084/cart/add" method="post">
+                <input type="hidden" name="serviceName" value="SME Tax Filing Automation">
+                <input type="hidden" name="price" value="40000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱40,000</button>
+            </form>
         </div>
 
         <div class="matrix-item">
             <div class="matrix-info">
-                <h3>5. Capital Gains & Investment Tax Advisory </h3>
+                <h3>5. Capital Gains & Investment Tax Advisory</h3>
                 <p>Specialized guidance for portfolio managers and investors on capital gains optimization.</p>
             </div>
-            <button class="btn-checkout">₱60,000 / mo</button>
+            <form action="http://localhost:8084/cart/add" method="post">
+                <input type="hidden" name="serviceName" value="Capital Gains & Investment Tax Advisory">
+                <input type="hidden" name="price" value="60000.00">
+                <button type="submit" class="btn-checkout">Add to Cart - ₱60,000</button>
+            </form>
         </div>
+    </div>
 
         <div style="margin-top: 40px; text-align: center; padding: 24px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px;">
             <h3 style="margin: 0 0 6px 0; font-size: 16px; color: #1a202c;">Product Catalog Feedback</h3>
@@ -215,7 +236,6 @@
         </div>
 
     </div>
-</div>
 
 </body>
 </html>

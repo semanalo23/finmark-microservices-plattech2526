@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class LogoutPageController {
 
-    @GetMapping("/logout-success")
+    @GetMapping("/auth/logout-success")
     public String logoutSuccess() {
         return "logout_page";
     }

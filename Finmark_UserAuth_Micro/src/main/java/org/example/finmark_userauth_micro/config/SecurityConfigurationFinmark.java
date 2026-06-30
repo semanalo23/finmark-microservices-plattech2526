@@ -44,6 +44,7 @@ public class SecurityConfigurationFinmark {
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login", "/register", "/reset", "/css/**", "/js/**").permitAll()
+                        .requestMatchers("/cart/**").permitAll()
                         .requestMatchers("/home").authenticated()
                         .anyRequest().authenticated()
                 )
