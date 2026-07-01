@@ -42,6 +42,7 @@ public class SecurityConfigurationFinmark {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login", "/register", "/reset", "/css/**", "/js/**").permitAll()
                         .requestMatchers("/cart/**").permitAll()
