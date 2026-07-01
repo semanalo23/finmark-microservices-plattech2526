@@ -13,6 +13,7 @@ public class DashboardSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, JwtRequestFilter jwtFilter) throws Exception {
         http
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/dashboard/**").authenticated()
                         .requestMatchers("/cart/**").permitAll()
